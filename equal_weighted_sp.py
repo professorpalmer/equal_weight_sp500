@@ -14,7 +14,7 @@ print(stocks)
 stocks = stocks[['Symbol']]
 stocks.columns = ['Ticker']
 
-#yfinance requires BRK.B read as BRK-B
+#yfinance requires secondary assets such as BRK.B to be listed as BRK-B
 stocks['Ticker'] = stocks['Ticker'].str.replace('.', '-')
 
 my_columns = ['Ticker', 'Price','Market Capitalization', 'Number Of Shares to Buy']
